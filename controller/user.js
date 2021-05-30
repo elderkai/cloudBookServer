@@ -17,7 +17,7 @@ getUserSize()
 setInterval(getUserSize, 1000*60*10)
 
 
-router.post('/user', auth, async (req, res) => { // 添加管理员
+router.post('/user', async (req, res) => { // 添加管理员
     let {username, avatar = '', desc = '', password, email, nickname} = req.body
     if (!avatar) {
         const baseURI = 'http://pbl.yaojunrong.com/avatar'
